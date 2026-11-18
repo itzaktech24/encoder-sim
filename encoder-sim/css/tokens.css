@@ -1,0 +1,47 @@
+/* encoder-sim · design tokens — dark engineering theme */
+:root{
+  --bg:#0E1116;
+  --bg-2:#11151C;
+  --panel:#151B24;
+  --panel-2:#1A2230;
+  --panel-3:#212B3A;
+  --line:#253041;
+  --line-soft:#1E2734;
+  --text:#D8E0EC;
+  --muted:#8B97AB;
+  --faint:#5C6879;
+
+  --hal:#FBBF24;         /* amber   — HAL 302x */
+  --hal-dim:rgba(251,191,36,.14);
+  --as5147:#22D3EE;      /* cyan    — AS5147  */
+  --as5147-dim:rgba(34,211,238,.13);
+  --as5116:#34D399;      /* emerald — AS5116  */
+  --as5116-dim:rgba(52,211,153,.13);
+  --cmp:#A78BFA;         /* violet  — Compare */
+  --cmp-dim:rgba(167,139,250,.14);
+
+  --ok:#34D399; --warn:#FBBF24; --bad:#F87171; --info:#7DD3FC;
+
+  --font-sans:"Inter","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --font-mono:"Fira Code","JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+
+  --r-sm:6px; --r-md:10px; --r-lg:16px;
+  --shadow:0 8px 28px rgba(0,0,0,.42);
+  --glow:0 0 0 3px rgba(34,211,238,.18);
+  --sidebar-w:264px;
+  --topbar-h:56px;
+}
+[data-ic="hal"]{ --ic:var(--hal); --ic-dim:var(--hal-dim); }
+[data-ic="as5147"]{ --ic:var(--as5147); --ic-dim:var(--as5147-dim); }
+[data-ic="as5116"]{ --ic:var(--as5116); --ic-dim:var(--as5116-dim); }
+[data-ic="compare"]{ --ic:var(--cmp); --ic-dim:var(--cmp-dim); }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--font-sans);font-size:15px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+code,.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+::selection{background:rgba(34,211,238,.28)}
+:focus-visible{outline:2px solid var(--as5147);outline-offset:2px;border-radius:4px}

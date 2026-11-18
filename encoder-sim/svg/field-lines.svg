@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Magnetic field lines of an ideal diametrically magnetized rotor">
+  <rect width="400" height="400" fill="#05070B"/>
+  <!-- plate circle -->
+  <circle cx="200" cy="200" r="95" fill="none" stroke="#33415C" stroke-width="1.6" stroke-dasharray="6 6"/>
+  <!-- magnet -->
+  <g>
+    <path d="M200 148 A52 52 0 0 1 200 252 Z" fill="#7F1D1D"/>
+    <path d="M200 148 A52 52 0 0 0 200 252 Z" fill="#1E3A8A"/>
+    <circle cx="200" cy="200" r="52" fill="none" stroke="#475569" stroke-width="2"/>
+    <text x="238" y="205" fill="#FCA5A5" font-family="monospace" font-size="15" font-weight="bold">N</text>
+    <text x="152" y="205" fill="#93C5FD" font-family="monospace" font-size="15" font-weight="bold">S</text>
+  </g>
+  <!-- dipole field lines (arcs) -->
+  <g stroke="#22D3EE" stroke-width="1.6" fill="none" opacity="0.9">
+    <path d="M200 148 C 300 90, 300 310, 200 252"/>
+    <path d="M200 148 C 340 60, 340 340, 200 252"/>
+    <path d="M200 148 C 380 30, 380 370, 200 252"/>
+    <path d="M200 252 C 100 310, 100 90, 200 148"/>
+    <path d="M200 252 C 60 340, 60 60, 200 148"/>
+    <path d="M200 252 C 20 370, 20 30, 200 148"/>
+  </g>
+  <!-- axial arrows along centerline -->
+  <g stroke="#FBBF24" stroke-width="2">
+    <line x1="262" y1="200" x2="330" y2="200"/><polygon points="330,200 320,195 320,205" fill="#FBBF24" stroke="none"/>
+    <line x1="138" y1="200" x2="70"  y2="200"/><polygon points="70,200 80,195 80,205" fill="#FBBF24" stroke="none"/>
+  </g>
+  <!-- sensor axes -->
+  <line x1="200" y1="372" x2="200" y2="336" stroke="#5C6879" stroke-width="1.4"/>
+  <text x="206" y="366" fill="#8B97AB" font-size="10" font-family="monospace">+ By</text>
+  <text x="16" y="24" fill="#8B97AB" font-size="10" font-family="monospace">Ideal diametric magnet · flux ⊥ to rotor axis</text>
+  <text x="16" y="392" fill="#5C6879" font-size="9" font-family="monospace">Plate circle (dashed): field ≈ uniform, rotating with θ</text>
+</svg>

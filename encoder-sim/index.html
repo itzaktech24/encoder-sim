@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magnetic Rotary Position Sensors — Interactive Engineering Lab | HAL 302x · AS5147 · AS5116</title>
+<meta name="description" content="Zero-dependency interactive educational lab for magnetic rotary position sensors used in motor control: TDK-Micronas HAL 302x, ams AS5147 and ams AS5116 — physics, block diagrams, pinouts, RTL, timing, diagnostics, OTP and a master comparison matrix. All values cross-checked against the official datasheets.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%230E1116' stroke='%2322D3EE' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%2322D3EE'/%3E%3Cpath d='M32 4v14M32 46v14M4 32h14M46 32h14' stroke='%23FBBF24' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div id="topbar" role="navigation" aria-label="Section navigation">
+  <svg width="26" height="26" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="26" fill="none" stroke="#22D3EE" stroke-width="6"/><circle cx="32" cy="32" r="8" fill="#22D3EE"/></svg>
+  <select id="section-select" aria-label="Jump to section"></select>
+  <span class="mode-pill" id="topbar-mode">WATCH</span>
+</div>
+
+<div id="app">
+
+  <!-- ══════════ SIDEBAR ══════════ -->
+  <aside id="sidebar" aria-label="Lab navigation">
+    <div class="brand">
+      <svg width="44" height="44" viewBox="0 0 64 64" role="img" aria-label="Encoder disc logo">
+        <circle cx="32" cy="32" r="28" fill="#11151C" stroke="#22D3EE" stroke-width="3.5"/>
+        <circle cx="32" cy="32" r="15" fill="none" stroke="#FBBF24" stroke-width="2" stroke-dasharray="4 5"/>
+        <circle cx="32" cy="32" r="6.5" fill="#22D3EE"/>
+        <circle cx="32" cy="9"  r="2.4" fill="#FBBF24"/><circle cx="52" cy="43" r="2.4" fill="#FBBF24"/><circle cx="12" cy="43" r="2.4" fill="#FBBF24"/>
+      </svg>
+      <div>
+        <h1>Magnetic Rotary<br>Position Sensors</h1>
+        <small>Interactive Engineering Lab · 3 Devices</small>
+      </div>
+    </div>
+
+    <div class="datasheets" aria-label="Source datasheets">
+      <span class="ds-title">Verified against</span>
+      <span class="ds-chip"><i class="ds-hal"></i>TDK-Micronas HAL 3020/3021 · DSH000237_002EN</span>
+      <span class="ds-chip"><i class="ds-5147"></i>ams AS5147 · DS000307 v2-00</span>
+      <span class="ds-chip"><i class="ds-5116"></i>ams AS5116 · DS000686 v2-00</span>
+    </div>
+
+    <nav class="nav" id="nav-list" aria-label="Sections"></nav>
+
+    <div class="sidebar-foot">
+      <b>Watch</b> modes auto-play narrated spec cards · <b>Play</b> modes are hands-on sandboxes.<br>
+      Unofficial educational tool — always consult the official datasheets for design-in.
+    </div>
+  </aside>
+
+  <!-- ══════════ MAIN ══════════ -->
+  <main id="main">
+    <div id="sections-root"></div>
+    <footer class="app-foot">
+      <b>Magnetic Rotary Position Sensors — Interactive Engineering Lab.</b>
+      Figures reproduced from: TDK-Micronas <code>DSH000237_002EN</code> (HAL 302x, Jul 2025) ·
+      ams <code>DS000307 v2-00</code> (AS5147) · ams <code>DS000686 v2-00</code> (AS5116).
+      All electrical values are traceable to those documents; where a datasheet and common practice
+      disagree, the datasheet text wins. Mismatches vs. common shorthand are flagged inline with
+      <em>“verify”</em> notes. This product is not affiliated with TDK-Micronas or ams-OSRAM.
+    </footer>
+  </main>
+</div>
+
+<!-- ══════════ DATA (window.ENC_DATA.*) ══════════ -->
+<script src="js/data/hal302x.js"></script>
+<script src="js/data/as5147.js"></script>
+<script src="js/data/as5116.js"></script>
+<script src="js/data/compare.js"></script>
+
+<!-- ══════════ SIMS (window.ENC_SIMS.*) ══════════ -->
+<script src="js/sims/magnet-physics.js"></script>
+<script src="js/sims/oscilloscope.js"></script>
+<script src="js/sims/rtl-stepper.js"></script>
+<script src="js/sims/race-sim.js"></script>
+
+<!-- ══════════ UI FRAMEWORK (window.ENC_UI.*) ══════════ -->
+<script src="js/ui/tabs.js"></script>
+<script src="js/ui/matrix.js"></script>
+<script src="js/ui/code-viewer.js"></script>
+
+<!-- ══════════ SECTIONS (push into window.ENC_SECTIONS) ══════════ -->
+<script src="js/sections/01-context.js"></script>
+<script src="js/sections/02-pinouts.js"></script>
+<script src="js/sections/03-absmax-electrical.js"></script>
+<script src="js/sections/04-functional-blocks.js"></script>
+<script src="js/sections/05-hall-geometry.js"></script>
+<script src="js/sections/06-outputs.js"></script>
+<script src="js/sections/07-gain-bandwidth.js"></script>
+<script src="js/sections/08-interfaces.js"></script>
+<script src="js/sections/09-dsp-rtl.js"></script>
+<script src="js/sections/10-diagnostics.js"></script>
+<script src="js/sections/11-otp-eeprom.js"></script>
+<script src="js/sections/12-master-compare.js"></script>
+
+<!-- ══════════ BOOTSTRAP ══════════ -->
+<script src="js/main.js"></script>
+</body>
+</html>
